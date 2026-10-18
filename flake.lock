@@ -195,11 +195,28 @@
         "type": "github"
       }
     },
+    "reticle-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1775237644,
+        "narHash": "sha256-9HPsr2hsTnwukBJH9CgD/ri9GXPD666QJt7Skz2MS54=",
+        "owner": "Tummetott",
+        "repo": "reticle.nvim",
+        "rev": "72cd360845a4cc83108d880554548ed7c6a83156",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Tummetott",
+        "repo": "reticle.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
         "gen-luarc": "gen-luarc",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "reticle-nvim": "reticle-nvim"
       }
     },
     "systems": {
