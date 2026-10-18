@@ -6,6 +6,11 @@
     flake-utils.url = "github:numtide/flake-utils";
     gen-luarc.url = "github:mrcjkb/nix-gen-luarc-json";
 
+    reticle-nvim = {
+      url = "github:/Tummetott/reticle.nvim";
+      flake = false;
+    };
+
     # Add bleeding-edge plugins here.
     # They can be updated with `nix flake update` (make sure to commit the generated flake.lock)
     # wf-nvim = {
@@ -42,7 +47,7 @@
         buildInputs = with pkgs; [
           # Tools for Lua and Nix development, useful for editing files in this repo
           lua-language-server
-          nil
+          nixd
           stylua
           luajitPackages.luacheck
           nvim-dev
