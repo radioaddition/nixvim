@@ -21,6 +21,12 @@ opt.incsearch = true
 opt.hlsearch = true
 opt.scrolloff = 4
 
+-- Disable column in insert mode & set line to underline (normally highlight)
+vim.cmd([[au InsertEnter * hi CursorLine gui=underline cterm=underline]]);
+vim.cmd([[au InsertLeave * hi CursorLine gui=none cterm=none guibg=Grey20]]);
+vim.cmd([[au InsertEnter * hi CursorColumn gui=none cterm=none guibg=transparent]]);
+vim.cmd([[au InsertLeave * hi CursorColumn gui=none cterm=none guibg=Grey20]]);
+
 opt.spell = true
 opt.spelllang = 'en'
 

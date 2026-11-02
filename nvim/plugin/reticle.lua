@@ -1,23 +1,16 @@
-require('reticle').setup {
+---@type reticle.opts
+require("reticle").setup({
     -- Enable/Disable the cursorline and/or cursorcolumn at startup
     on_startup = {
-        cursorline = false,
-        cursorcolumn = false,
-        cursorcross = true,
+        cursorline = true,
+        cursorcolumn = true,
     },
 
-    -- Disable the cursorline and cursorcolumn in insert mode
+
+    -- Disable the cursorline and cursorcolumn in insert mode (I have my own custom script that does this differently)
     disable_in_insert = false,
 
-    -- Disable column in insert mode & set line to underline (normally highlight)
-    vim.cmd([[au InsertEnter * hi CursorLine gui=underline cterm=underline]]);
-    vim.cmd([[au InsertLeave * hi CursorLine gui=none cterm=none guibg=Grey20]]);
-    vim.cmd([[au InsertEnter * hi CursorColumn gui=none cterm=none guibg=transparent]]);
-    vim.cmd([[au InsertLeave * hi CursorColumn gui=none cterm=none guibg=Grey20]]);
-
-
-
-    -- Disable the cursorline and cursorcolumn in diff mode
+    -- Don't disable the cursorline and cursorcolumn in diff mode 
     disable_in_diff = true,
 
     -- By default, nvim highlights the cursorline number only when the
@@ -36,17 +29,17 @@ require('reticle').setup {
 
     -- Specify filetypes where the cursorline and/or cursorcolumn are always
     -- enabled, regardless of the global setting.
-    always = {
-        cursorline = {},
-        cursorcolumn = {},
-    },
+    -- always = {
+    --     cursorline = {},
+    --     cursorcolumn = {},
+    -- },
 
     -- Specify filetypes where the cursorline and/or cursorcolumn are always
     -- enabled when the window is focused, regardless of the global setting.
-    on_focus = {
-        cursorline = {},
-        cursorcolumn = {},
-    },
+    -- on_focus = {
+    --     cursorline = {},
+    --     cursorcolumn = {},
+    -- },
 
     -- Define filetypes which are ignored by the plugin
     ignore = {
@@ -75,8 +68,8 @@ require('reticle').setup {
     -- cursorline/cursorcolumn without offering a configuration option for
     -- disabling them. By adding these filetypes to the 'never' table, you
     -- can override the plugin's settings and turn off these features.
-    never = {
-        cursorline = {},
-        cursorcolumn = {},
-    },
-}
+    -- never = {
+    --     cursorline = {},
+    --     cursorcolumn = {},
+    -- },
+})
